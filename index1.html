@@ -843,42 +843,73 @@
 </section>
 
 
-  <!-- Contact -->
+<!-- Contact Section -->
 <section id="contact" class="py-20 bg-white">
   <div class="max-w-4xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-gray-800">Contact Me</h2>
     <p class="mt-4 text-gray-600">Let’s connect! Drop me a message or find me on social media.</p>
+    
     <form id="contactForm" class="mt-8 grid gap-4 max-w-lg mx-auto">
+      <!-- EmailJS template variable names -->
       <input type="text" name="from_name" placeholder="Your Name" class="border rounded px-4 py-2" required>
       <input type="email" name="from_email" placeholder="Your Email" class="border rounded px-4 py-2" required>
       <textarea name="message" rows="4" placeholder="Your Message" class="border rounded px-4 py-2" required></textarea>
       <button type="submit" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">Send Message</button>
     </form>
+
+    <!-- Social Links -->
+    <div class="mt-12">
+      <p class="text-gray-600 mb-6">You can also reach me via GitHub, LinkedIn, or email:</p>
+      <div class="flex justify-center space-x-6 text-gray-700 text-2xl">
+        <!-- GitHub -->
+        <a href="https://github.com/YourUsername" target="_blank" class="hover:text-gray-900 transition">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .5C5.373.5 0 5.873 0 12.5c0 5.303 3.438 9.8 8.205 11.387.6.11.82-.26.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.762-1.604-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.382 1.236-3.222-.123-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.43 11.43 0 013.003-.404c1.02.005 2.047.138 3.003.404 2.288-1.552 3.293-1.23 3.293-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.479 5.922.43.37.823 1.1.823 2.222v3.293c0 .32.216.694.825.577C20.565 22.297 24 17.803 24 12.5 24 5.873 18.627.5 12 .5z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/YourLinkedIn" target="_blank" class="hover:text-blue-600 transition">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C3.34 3.5 2 4.83 2 6.5S3.34 9.5 4.98 9.5 7.96 8.17 7.96 6.5 6.62 3.5 4.98 3.5zM2.4 21h5.16V9H2.4v12zm7.68-12v12h5.16v-6.17c0-3.4 4.4-3.68 4.4 0V21h5.16v-7.85c0-6.48-7.12-6.24-7.68-3.06h-.12V9h-5.16z"/>
+          </svg>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:your.email@example.com" class="hover:text-red-500 transition">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12.713l11.985-9.713H.015L12 12.713zm0 2.574L.015 4.571V20h23.97V4.571L12 15.287z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
+
 
 <!-- EmailJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-  })();
+  // Initialize EmailJS with your public key
+  emailjs.init("fFMcn-EaqapLqJc2l"); // Replace with your EmailJS public key
 
   const form = document.getElementById('contactForm');
 
-  form.addEventListener('submit', function(e){
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS values
+    emailjs.sendForm('service_djodpvs', 'template_8ib8kc7', this)
       .then(() => {
         alert('Message sent successfully!');
         form.reset();
-      }, (err) => {
-        alert('Failed to send message: ' + JSON.stringify(err));
+      })
+      .catch((err) => {
+        console.error('EmailJS error:', err);
+        alert('Failed to send message. Please try again later.');
       });
   });
 </script>
-
 
   <!-- Footer -->
   <footer class="py-6 bg-gray-900 text-gray-400 text-center">
