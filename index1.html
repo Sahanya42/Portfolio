@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahanya Kandanaarachchi | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-gray-50 text-gray-900 font-inter">
+
+  <!-- Navbar -->
+<nav class="fixed w-full bg-white shadow-sm z-10">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-3xl text-blue-600" style="font-family: 'Great Vibes', cursive;"> Sahanya</h1>
+
+    <!-- Navbar links -->
+    <ul class="hidden md:flex space-x-6 font-medium">
+      <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+      <li><a href="#about" class="hover:text-blue-600">About</a></li>
+      <li><a href="#education" class="hover:text-blue-600">Education</a></li>
+      <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+
+    <!-- Social icons + CV -->
+    <div class="flex items-center space-x-4">
+      <!-- GitHub -->
+      <a href="https://github.com/Sahanya42" target="_blank" class="text-gray-700 hover:text-gray-900 transition">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .5C5.373.5 0 5.873 0 12.5c0 5.303 3.438 9.8 8.205 11.387.6.11.82-.26.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.762-1.604-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.382 1.236-3.222-.123-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.43 11.43 0 013.003-.404c1.02.005 2.047.138 3.003.404 2.288-1.552 3.293-1.23 3.293-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.479 5.922.43.37.823 1.1.823 2.222v3.293c0 .32.216.694.825.577C20.565 22.297 24 17.803 24 12.5 24 5.873 18.627.5 12 .5z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/sahanya-kandanaarachchi-701283371" target="_blank" class="text-gray-700 hover:text-blue-600 transition">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C3.34 3.5 2 4.83 2 6.5S3.34 9.5 4.98 9.5 7.96 8.17 7.96 6.5 6.62 3.5 4.98 3.5zM2.4 21h5.16V9H2.4v12zm7.68-12v12h5.16v-6.17c0-3.4 4.4-3.68 4.4 0V21h5.16v-7.85c0-6.48-7.12-6.24-7.68-3.06h-.12V9h-5.16z"/>
+        </svg>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:sahanyakandanaarachchi@gmail.com" class="text-gray-700 hover:text-red-500 transition">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 12.713l11.985-9.713H.015L12 12.713zm0 2.574L.015 4.571V20h23.97V4.571L12 15.287z"/>
+        </svg>
+      </a>
+
+      <!-- Space before CV button -->
+      <div class="ml-4"></div>
+
+      <!-- Download CV -->
+      <a href="cv.pdf" download class="bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition flex items-center space-x-1">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M13 10V3H7v7H3l7 7 7-7h-4z"/>
+        </svg>
+        <!-- Responsive text -->
+        <span class="hidden sm:inline">Download CV</span>
+        <span class="sm:hidden">CV</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+ <!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-20">
+  <!-- Animated Gradient Background -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 animate-gradient bg-[length:200%_200%]"></div>
+
+  <!-- Content -->
+  <div class="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">
+        Hi, I’m <span class="text-yellow-300">Sahanya Kandanaarachchi</span>
+      </h2>
+      <p class="mt-6 text-lg leading-relaxed">
+        Software Engineering student at <strong>NIBM</strong>, passionate about building clean, efficient, and user-friendly software solutions.
+      </p>
+      <a href="#projects" class="mt-8 inline-block bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">
+        View My Work
+      </a>
+    </div>
+    <div class="flex justify-center">
+      <img src="me.png.png" alt="Sahanya" class="max-w-xs md:max-w-sm lg:max-w-md object-cover"/>
+    </div>
+  </div>
+</section>
+
+
+<style>
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient {
+  animation: gradientBG 10s ease infinite;
+}
+</style>
+
+
+<!-- About -->
+<section id="about" class="relative py-20 overflow-hidden font-sans">
+  <!-- Subtle Animated Background -->
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 opacity-70 animate-slow-move"></div>
+    <svg class="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="200" fill="rgba(200,200,255,0.05)">
+        <animate attributeName="cx" values="50;450;50" dur="20s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="50;400;50" dur="25s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="200" cy="300" r="150" fill="rgba(255,200,255,0.05)">
+        <animate attributeName="cx" values="200;600;200" dur="30s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="300;100;300" dur="35s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+  </div>
+
+  <!-- Content -->
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">About Me</h2>
+    <p class="mt-6 text-lg text-gray-700 leading-relaxed text-justify">
+      I am a Software Engineering undergraduate at NIBM with hands-on experience in 
+      Java, C#, PHP, JavaScript, HTML, CSS, and MySQL. Passionate about building full-stack applications, desktop systems, 
+      and Android apps with Firebase integration, I enjoy solving problems and creating user-friendly solutions. Currently expanding my knowledge in 
+      MERN Stack Development and Digital Marketing.
+    </p>
+  </div>
+</section>
+
+<style>
+/* Subtle background animation */
+@keyframes slowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-slow-move {
+  background-size: 200% 200%;
+  animation: slowMove 30s ease infinite;
+}
+</style>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+<!-- Education, Certifications & Online Courses Section -->
+<section id="education" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Education, Certifications & Online Courses</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <!-- Education Column -->
+      <div class="space-y-8 bg-white p-6 rounded-xl shadow-md">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Education</h3>
+        <div class="border-l-4 border-blue-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">Higher National Diploma in Software Engineering</h4>
+          <p class="text-gray-600">NIBM (2024 – Present)</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">Diploma in Software Engineering – GPA 3.84</h4>
+          <p class="text-gray-600">NIBM (2023 – 2024)</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">GCE Advanced Level – Maths Stream</h4>
+          <p class="text-gray-600">Co/Gothami Balika Vidyalaya (2022)</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">GCE Ordinary Level – 5As, 2Bs, 2Cs</h4>
+          <p class="text-gray-600">Co/Gothami Balika Vidyalaya (2019)</p>
+        </div>
+      </div>
+
+      <!-- Certifications Column -->
+      <div class="space-y-8 bg-white p-6 rounded-xl shadow-md">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Certifications</h3>
+        <div class="border-l-4 border-green-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">Advance Certificate in Digital Marketing & Brand Management</h4>
+          <p class="text-gray-600">NIBM (2025 – Present)</p>
+        </div>
+        <div class="border-l-4 border-green-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">Certificate in Business Web Development</h4>
+          <p class="text-gray-600">Ape Panthiya ICT Education System (2023)</p>
+        </div>
+        <div class="border-l-4 border-green-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">General English</h4>
+          <p class="text-gray-600">British Council (Nov 2023)</p>
+        </div>
+        <div class="border-l-4 border-green-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">Practical Spoken English</h4>
+          <p class="text-gray-600">Lanka Educational Information Service (May 2020)</p>
+        </div>
+      </div>
+
+      <!-- Online Courses Column -->
+      <div class="space-y-8 bg-white p-6 rounded-xl shadow-md">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Online Courses</h3>
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">Linux Crash Course with Labs</h4>
+          <p class="text-gray-600">KodeKloud (Sep 2025)</p>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">Basic of Oracle SQL Course</h4>
+          <p class="text-gray-600">Udemy (Sep 2025)</p>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">Certificate in MERN Stack</h4>
+          <p class="text-gray-600">SKYREK Academy (2025 – Present)</p>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">Web Design for Beginners</h4>
+          <p class="text-gray-600">Faculty of IT, University of Moratuwa (Aug 2025)</p>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">CSS (Basic) Certificate</h4>
+          <p class="text-gray-600">HackerRank (Jun 2025)</p>
+        </div>
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h4 class="text-xl font-semibold text-gray-800">SQL (Basic) Certificate</h4>
+          <p class="text-gray-600">HackerRank (Jun 2025)</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Projects -->
+<!-- Projects Section -->
+<section id="projects" class="relative py-20">
+  <!-- Background Gradient -->
+  <div class="absolute inset-0 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 opacity-70 animate-slow-move -z-10"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative">
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Projects</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+      <!-- Timber Store System -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/timber.jpg","img/timber1.jpg","img/timber2.jpg","img/timber3.jpg","img/timber4.jpg"]'>
+          <img src="img/timber.jpg" class="w-full h-full object-cover rounded-md">
+        </div>
+        <h3 class="text-xl font-semibold text-blue-600">Timber Store Management</h3>
+        <p class="text-gray-600 mt-2">Automated system for inventory, suppliers, deliveries, and reporting (PHP, MySQL, HTML, CSS).</p>
+        <a href="https://github.com/Sahanya42/Timber-Company-Management-System" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Hotel Management System -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/hotel.jpg","img/hotel1.jpg","img/hotel2.jpg"]'>
+          <img src="img/hotel.jpg" class="w-full h-full object-cover rounded-md">
+        </div>
+        <h3 class="text-xl font-semibold text-blue-600">Hotel Management System</h3>
+        <p class="text-gray-600 mt-2">Web-based system for bookings, billing, and reporting with role-based access (PHP, JavaScript, MySQL).</p>
+        <a href="https://github.com/Sahanya42/Hotel-Management" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+
+      <!-- Personal Portfolio -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/my.png"]'>
+          <img src="img/my.png" class="w-full h-full object-cover rounded-md">
+        </div>
+        <h3 class="text-xl font-semibold text-blue-600">Personal Portfolio</h3>
+        <p class="text-gray-600 mt-2">Responsive portfolio website using HTML, Tailwind CSS, and JavaScript with a modern UI.</p>
+        <a href="https://github.com/Sahanya42/Portfolio.git" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+     <!-- Independent Sports Club Website -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <!-- Thumbnail -->
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
+          <video id="iscCardVideo" class="w-full h-full object-cover rounded-md" muted>
+            <source src="img/isc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h3 class="text-xl font-semibold text-blue-600">Independent Sports Club Website</h3>
+        <p class="text-gray-600 mt-2">Responsive website with full web functionality.</p>
+        <a href="https://github.com/Sahanya42/ISC" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- ISC Video Modal -->
+      <div id="iscModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex items-center justify-center">
+          <button id="iscClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
+          <video id="iscModalVideo" class="max-h-full max-w-full rounded-md" controls>
+            <source src="img/isc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <script>
+      const iscCardVideo = document.getElementById('iscCardVideo');
+      const iscModal = document.getElementById('iscModal');
+      const iscClose = document.getElementById('iscClose');
+      const iscModalVideo = document.getElementById('iscModalVideo');
+
+      // Open modal
+      iscCardVideo.addEventListener('click', () => {
+        iscModal.classList.remove('hidden');
+        iscModalVideo.play().catch(err => console.log("Autoplay blocked:", err));
+      });
+
+      // Close modal
+      iscClose.addEventListener('click', () => {
+        iscModal.classList.add('hidden');
+        iscModalVideo.pause();
+        iscModalVideo.currentTime = 0;
+      });
+
+      // Close by clicking outside
+      iscModal.addEventListener('click', (e) => {
+        if(e.target === iscModal){
+          iscModal.classList.add('hidden');
+          iscModalVideo.pause();
+          iscModalVideo.currentTime = 0;
+        }
+      });
+      </script>
+
+
+      <!-- Book Inventory & Sales System -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/bookshop.png","img/bookshop1.png","img/bookshop2.png","img/bookshop3.png"]'>
+          <img src="img/bookshop.png" class="w-full h-full object-cover rounded-md">
+        </div>
+        <h3 class="text-xl font-semibold text-blue-600">Book Inventory & Sales System</h3>
+        <p class="text-gray-600 mt-2">Java desktop app with inventory, sales, secure login, and reporting (Java Swing + MySQL + JasperReports).</p>
+        <a href="https://github.com/Sahanya42/Book-Shop-Management-System" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Automated Response App (IoT) -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/iot.png","img/iot1.png","img/iot2.png","img/iot3.png","img/iot4.png"]'>
+          <img src="img/iot.png" class="w-full h-full object-cover rounded-md">
+        </div>
+        <h3 class="text-xl font-semibold text-blue-600">Automated Response App</h3>
+        <p class="text-gray-600 mt-2">Android app integrated with IoT devices and Firebase for real-time sensor data and motor control.</p>
+        <a href="https://github.com/Sahanya42/AutomatedResponseApp" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Tuition Application -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/app.png","img/app1.png","img/app2.png","img/app3.png","img/app4.png"]'>
+          <img src="img/app.png" class="w-full h-full object-cover rounded-md">
+        </div>
+        <h3 class="text-xl font-semibold text-blue-600">Tuition Application</h3>
+        <p class="text-gray-600 mt-2">Android app with dashboards for teachers, students, and admin, featuring QR-based attendance and scheduling.</p>
+        <a href="#" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Diabetes Prediction ML Model -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/ml.png","img/ml1.png"]'>
+          <img src="img/ml.png" class="w-full h-full object-cover rounded-md">
+        </div>
+        <h3 class="text-xl font-semibold text-blue-600">Diabetes Prediction ML Model</h3>
+        <p class="text-gray-600 mt-2">ML model trained on the Indian Pima Diabetes dataset to predict diabetes risk (Python, Pandas, Scikit-learn, Matplotlib).</p>
+        <a href="https://github.com/Sahanya42/Diabetes-Prediction-ML-Model" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Robotic Key Locator -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <!-- Thumbnail -->
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
+          <video id="robotCardVideo" class="w-full h-full object-cover rounded-md" muted>
+            <source src="img/robotics.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h3 class="text-xl font-semibold text-blue-600">Robotic Key Locator</h3>
+        <p class="text-gray-600 mt-2">Arduino-controlled robot with ultrasonic sensor and motor, locates keys and sends notifications (C, Arduino, IoT).</p>
+        <a href="https://github.com/Sahanya42/Robotic-Key-Locator" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Robot Video Modal -->
+      <div id="robotModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex items-center justify-center">
+          <button id="robotClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
+          <video id="robotModalVideo" class="max-h-full max-w-full rounded-md" controls>
+            <source src="img/robotics.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <script>
+      const robotCardVideo = document.getElementById('robotCardVideo');
+      const robotModal = document.getElementById('robotModal');
+      const robotClose = document.getElementById('robotClose');
+      const robotModalVideo = document.getElementById('robotModalVideo');
+
+      // Open modal
+      robotCardVideo.addEventListener('click', () => {
+        robotModal.classList.remove('hidden');
+        robotModalVideo.play().catch(err => console.log("Autoplay blocked:", err));
+      });
+
+      // Close modal
+      robotClose.addEventListener('click', () => {
+        robotModal.classList.add('hidden');
+        robotModalVideo.pause();
+        robotModalVideo.currentTime = 0;
+      });
+
+      // Close by clicking outside
+      robotModal.addEventListener('click', (e) => {
+        if(e.target === robotModal){
+          robotModal.classList.add('hidden');
+          robotModalVideo.pause();
+          robotModalVideo.currentTime = 0;
+        }
+      });
+      </script>
+
+
+      <!-- Life Motivator Project -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <!-- Image (click to open modal) -->
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
+            <img src="img/motivator.png" id="motivatorCardImg" class="w-full h-full object-cover rounded-md">
+        </div>
+
+        <h3 class="text-xl font-semibold text-blue-600">Life Motivator</h3>
+        <p class="text-gray-600 mt-2">A web application designed to provide motivational quotes, tips, and daily encouragement to users. Built as a test project to explore interactive UI and dynamic content updates.</p>
+        <a href="https://github.com/Sahanya42/Motivator-Webpage" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+        </div>
+
+        <!-- TypeTracker Project -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <!-- Image (click to open modal) -->
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
+            <img src="img/type.png" id="typeCardImg" class="w-full h-full object-cover rounded-md">
+        </div>
+
+        <h3 class="text-xl font-semibold text-blue-600">Type Shap Tool</h3>
+        <p class="text-gray-600 mt-2">Java desktop application for tracking typing speed and accuracy, developed for the Programming Data Structures and Algorithms module in NetBeans.</p>
+        <a href="https://github.com/Sahanya42/Type-Sharp-tool" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Reusable Modal -->
+<div id="projectModal" class="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 hidden">
+  <div class="bg-white w-11/12 md:w-2/3 lg:w-1/2 rounded-xl overflow-hidden shadow-lg flex flex-col relative">
+    <button id="modalClose" class="absolute top-2 right-2 text-gray-200 text-3xl font-bold hover:text-white">×</button>
+    <button id="modalPrev" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-200 text-3xl font-bold hover:text-white">←</button>
+    <div class="flex justify-center items-center w-full h-96 md:h-[500px] overflow-hidden">
+      <img id="modalImg" src="" alt="Project Image" class="max-h-full max-w-full object-contain hidden">
+      <video id="modalVideo" src="" class="max-h-full max-w-full object-contain hidden" controls autoplay></video>
+    </div>
+    <button id="modalNext" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-200 text-3xl font-bold hover:text-white">→</button>
+  </div>
+</div>
+
+<script>
+  const thumbnails = document.querySelectorAll(".project-thumbnail");
+  const modal = document.getElementById("projectModal");
+  const modalImg = document.getElementById("modalImg");
+  const modalVideo = document.getElementById("modalVideo");
+  const modalClose = document.getElementById("modalClose");
+  const modalPrev = document.getElementById("modalPrev");
+  const modalNext = document.getElementById("modalNext");
+
+  let currentIndex = 0;
+  let currentType = "image";
+  let currentItems = [];
+
+  function showModal(type, items, index=0) {
+    currentType = type;
+    currentItems = items;
+    currentIndex = index;
+    if(type === "image") {
+      modalImg.src = items[index];
+      modalImg.classList.remove("hidden");
+      modalVideo.classList.add("hidden");
+      modalVideo.pause();
+    } else if(type === "video") {
+      modalVideo.src = items[index];
+      modalVideo.classList.remove("hidden");
+      modalImg.classList.add("hidden");
+      modalVideo.play();
+    }
+    modal.classList.remove("hidden");
+  }
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener("click", () => {
+      const type = thumbnail.dataset.type;
+      let items = JSON.parse(thumbnail.dataset.src || `"${thumbnail.dataset.src}"`);
+      if(typeof items === "string") items = [items]; // single video
+      showModal(type, items);
+    });
+  });
+
+  modalClose.addEventListener("click", () => modal.classList.add("hidden"));
+  modal.addEventListener("click", e => { if(e.target === modal) modal.classList.add("hidden"); });
+
+  modalPrev.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + currentItems.length) % currentItems.length;
+    showModal(currentType, currentItems, currentIndex);
+  });
+
+  modalNext.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % currentItems.length;
+    showModal(currentType, currentItems, currentIndex);
+  });
+
+  document.addEventListener("keydown", e => {
+    if(modal.classList.contains("hidden")) return;
+    if(e.key === "ArrowLeft") modalPrev.click();
+    if(e.key === "ArrowRight") modalNext.click();
+    if(e.key === "Escape") modalClose.click();
+  });
+</script>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-gray-800">Contact Me</h2>
+    <p class="mt-4 text-gray-600">Let’s connect! Drop me a message or find me on social media.</p>
+    
+    <form id="contactForm" class="mt-8 grid gap-4 max-w-lg mx-auto">
+      <!-- EmailJS template variable names -->
+      <input type="text" name="from_name" placeholder="Your Name" class="border rounded px-4 py-2" required>
+      <input type="email" name="from_email" placeholder="Your Email" class="border rounded px-4 py-2" required>
+      <textarea name="message" rows="4" placeholder="Your Message" class="border rounded px-4 py-2" required></textarea>
+      <button type="submit" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+    </form>
+
+    <!-- Social Links -->
+    <div class="mt-12">
+      <p class="text-gray-600 mb-6">You can also reach me via GitHub, LinkedIn, or email:</p>
+      <div class="flex justify-center space-x-6 text-gray-700 text-2xl">
+        <!-- GitHub -->
+        <a href="https://github.com/Sahanya42" target="_blank" class="hover:text-gray-900 transition">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .5C5.373.5 0 5.873 0 12.5c0 5.303 3.438 9.8 8.205 11.387.6.11.82-.26.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.304.762-1.604-2.665-.303-5.467-1.332-5.467-5.932 0-1.31.467-2.382 1.236-3.222-.123-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.43 11.43 0 013.003-.404c1.02.005 2.047.138 3.003.404 2.288-1.552 3.293-1.23 3.293-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.479 5.922.43.37.823 1.1.823 2.222v3.293c0 .32.216.694.825.577C20.565 22.297 24 17.803 24 12.5 24 5.873 18.627.5 12 .5z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/sahanya-kandanaarachchi-701283371" target="_blank" class="hover:text-blue-600 transition">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C3.34 3.5 2 4.83 2 6.5S3.34 9.5 4.98 9.5 7.96 8.17 7.96 6.5 6.62 3.5 4.98 3.5zM2.4 21h5.16V9H2.4v12zm7.68-12v12h5.16v-6.17c0-3.4 4.4-3.68 4.4 0V21h5.16v-7.85c0-6.48-7.12-6.24-7.68-3.06h-.12V9h-5.16z"/>
+          </svg>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:sahanyakandanaarachchi@gmail.com.com" class="hover:text-red-500 transition">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12.713l11.985-9.713H.015L12 12.713zm0 2.574L.015 4.571V20h23.97V4.571L12 15.287z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS with your public key
+  emailjs.init("fFMcn-EaqapLqJc2l"); // Replace with your EmailJS public key
+
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS values
+    emailjs.sendForm('service_djodpvs', 'template_8ib8kc7', this)
+      .then(() => {
+        alert('Message sent successfully!');
+        form.reset();
+      })
+      .catch((err) => {
+        console.error('EmailJS error:', err);
+        alert('Failed to send message. Please try again later.');
+      });
+  });
+</script>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-gray-400 text-center">
+    <p>© 2025 Sahanya Kandanaarachchi. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+
