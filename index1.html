@@ -65,8 +65,8 @@
 </nav>
 
 
-  <!-- Hero Section -->
-<section id="home" class="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+ <!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-20">
   <!-- Animated Gradient Background -->
   <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 animate-gradient bg-[length:200%_200%]"></div>
 
@@ -88,6 +88,7 @@
     </div>
   </div>
 </section>
+
 
 <style>
 /* Gradient Animation */
@@ -231,6 +232,7 @@
 
 
 <!-- Projects -->
+<!-- Projects Section -->
 <section id="projects" class="relative py-20">
   <!-- Background Gradient -->
   <div class="absolute inset-0 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 opacity-70 animate-slow-move -z-10"></div>
@@ -238,535 +240,205 @@
   <div class="max-w-6xl mx-auto px-6 relative">
     <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Projects</h2>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
-    
 
-      <!-- Timber Store System with Manual Carousel -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
-        <!-- Image (click to open modal) -->
-        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
-            <img src="img/timber.jpg" id="timberCardImg" class="w-full h-full object-cover rounded-md">
+      <!-- Timber Store System -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/timber.jpg","img/timber1.jpg","img/timber2.jpg","img/timber3.jpg","img/timber4.jpg"]'>
+          <img src="img/timber.jpg" class="w-full h-full object-cover rounded-md">
         </div>
-
         <h3 class="text-xl font-semibold text-blue-600">Timber Store Management</h3>
         <p class="text-gray-600 mt-2">Automated system for inventory, suppliers, deliveries, and reporting (PHP, MySQL, HTML, CSS).</p>
         <a href="https://github.com/Sahanya42/Timber-Company-Management-System" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Hotel Management System -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/hotel.jpg","img/hotel1.jpg","img/hotel2.jpg"]'>
+          <img src="img/hotel.jpg" class="w-full h-full object-cover rounded-md">
         </div>
-
-        <!-- Half-screen Modal -->
-        <div id="timberModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex flex-col items-center">
-            <button id="timberClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-            <div class="flex items-center justify-between w-full h-full">
-            <button id="timberModalPrev" class="text-gray-700 text-3xl font-bold">&larr;</button>
-            <img src="img/timber.jpg" id="timberModalImg" class="max-h-full max-w-full rounded-md object-contain">
-            <button id="timberModalNext" class="text-gray-700 text-3xl font-bold">&rarr;</button>
-            </div>
-        </div>
-        </div>
-
-        <script>
-        const timberImages = ["img/timber.jpg","img/timber1.jpg","img/timber2.jpg","img/timber3.jpg","img/timber4.jpg"];
-        let currentIndex = 0;
-
-        const cardImg = document.getElementById('timberCardImg');
-        const modal = document.getElementById('timberModal');
-        const modalImg = document.getElementById('timberModalImg');
-        const modalClose = document.getElementById('timberClose');
-        const modalPrev = document.getElementById('timberModalPrev');
-        const modalNext = document.getElementById('timberModalNext');
-
-        // Open modal when clicking on card image
-        cardImg.addEventListener('click', () => {
-            modalImg.src = timberImages[currentIndex];
-            modal.classList.remove('hidden');
-        });
-
-        // Close modal
-        modalClose.addEventListener('click', () => modal.classList.add('hidden'));
-        modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.add('hidden'); });
-
-        // Navigate modal images
-        modalPrev.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + timberImages.length) % timberImages.length;
-            modalImg.src = timberImages[currentIndex];
-        });
-
-        modalNext.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % timberImages.length;
-            modalImg.src = timberImages[currentIndex];
-        });
-        </script>
-
-
-
-      <!-- Hotel Management Card -->
-            
-            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
-            <img src="img/hotel.jpg" alt="Hotel Management" 
-                class="rounded-md mb-4 h-40 w-full object-cover cursor-pointer" 
-                id="hotelThumbnail">
-
-            <h3 class="text-xl font-semibold text-blue-600">Hotel Management System</h3>
-            <p class="text-gray-600 mt-2">Web-based system for bookings, billing, and reporting with role-based access (PHP, JavaScript, MySQL).</p>
-            <a href="https://github.com/Sahanya42/Hotel-Management" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
-            </div>
-
-            <!-- Half-screen Modal -->
-            <div id="hotelModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-            <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex flex-col items-center">
-                <button id="hotelClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-                <div class="flex items-center justify-between w-full h-full">
-                <button id="hotelPrev" class="text-gray-700 text-3xl font-bold">&larr;</button>
-                <img src="img/hotel.jpg" id="hotelImg" class="max-h-full max-w-full rounded-md object-contain">
-                <button id="hotelNext" class="text-gray-700 text-3xl font-bold">&rarr;</button>
-                </div>
-            </div>
-            </div>
-
-            <script>
-            const hotelImages = ["img/hotel.jpg", "img/hotel1.jpg", "img/hotel2.jpg"];
-            let currentHotelIndex = 0;
-
-            const hotelThumbnail = document.getElementById("hotelThumbnail");
-            const hotelModal = document.getElementById("hotelModal");
-            const hotelImg = document.getElementById("hotelImg");
-            const hotelPrev = document.getElementById("hotelPrev");
-            const hotelNext = document.getElementById("hotelNext");
-            const hotelClose = document.getElementById("hotelClose");
-
-            // Open modal
-            hotelThumbnail.addEventListener("click", () => {
-                hotelImg.src = hotelImages[currentHotelIndex];
-                hotelModal.classList.remove("hidden");
-            });
-
-            // Close modal
-            hotelClose.addEventListener("click", () => {
-                hotelModal.classList.add("hidden");
-            });
-
-            // Previous image
-            hotelPrev.addEventListener("click", () => {
-                currentHotelIndex = (currentHotelIndex - 1 + hotelImages.length) % hotelImages.length;
-                hotelImg.src = hotelImages[currentHotelIndex];
-            });
-
-            // Next image
-            hotelNext.addEventListener("click", () => {
-                currentHotelIndex = (currentHotelIndex + 1) % hotelImages.length;
-                hotelImg.src = hotelImages[currentHotelIndex];
-            });
-
-            // Close on click outside modal content
-            hotelModal.addEventListener("click", (e) => {
-                if (e.target === hotelModal) hotelModal.classList.add("hidden");
-            });
-            </script>
+        <h3 class="text-xl font-semibold text-blue-600">Hotel Management System</h3>
+        <p class="text-gray-600 mt-2">Web-based system for bookings, billing, and reporting with role-based access (PHP, JavaScript, MySQL).</p>
+        <a href="https://github.com/Sahanya42/Hotel-Management" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
 
 
       <!-- Personal Portfolio -->
-            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
-        <!-- Image (click to open modal) -->
-        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
-            <img src="img/my.png" id="portfolioCardImg" class="w-full h-full object-cover rounded-md">
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/my.png"]'>
+          <img src="img/my.png" class="w-full h-full object-cover rounded-md">
         </div>
-
         <h3 class="text-xl font-semibold text-blue-600">Personal Portfolio</h3>
         <p class="text-gray-600 mt-2">Responsive portfolio website using HTML, Tailwind CSS, and JavaScript with a modern UI.</p>
         <a href="https://github.com/Sahanya42/Portfolio.git" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
-        </div>
+      </div>
 
-        <!-- Half-screen Modal -->
-        <div id="portfolioModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex flex-col items-center">
-            <button id="portfolioClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-            <div class="flex items-center justify-between w-full h-full">
-            <button id="portfolioModalPrev" class="text-gray-700 text-3xl font-bold">&larr;</button>
-            <img src="img/my.png" id="portfolioModalImg" class="max-h-full max-w-full rounded-md object-contain">
-            <button id="portfolioModalNext" class="text-gray-700 text-3xl font-bold">&rarr;</button>
-            </div>
-        </div>
-        </div>
-
-        <script>
-        const portfolioImages = ["img/my.png"]; // add more images here if needed
-        let portfolioIndex = 0;
-
-        const portfolioCardImg = document.getElementById('portfolioCardImg');
-        const portfolioModal = document.getElementById('portfolioModal');
-        const portfolioModalImg = document.getElementById('portfolioModalImg');
-        const portfolioClose = document.getElementById('portfolioClose');
-        const portfolioPrev = document.getElementById('portfolioModalPrev');
-        const portfolioNext = document.getElementById('portfolioModalNext');
-
-        // Open modal when clicking card image
-        portfolioCardImg.addEventListener('click', () => {
-            portfolioModalImg.src = portfolioImages[portfolioIndex];
-            portfolioModal.classList.remove('hidden');
-        });
-
-        // Close modal
-        portfolioClose.addEventListener('click', () => portfolioModal.classList.add('hidden'));
-        portfolioModal.addEventListener('click', (e) => { if(e.target === portfolioModal) portfolioModal.classList.add('hidden'); });
-
-        // Navigate modal images
-        portfolioPrev.addEventListener('click', () => {
-            portfolioIndex = (portfolioIndex - 1 + portfolioImages.length) % portfolioImages.length;
-            portfolioModalImg.src = portfolioImages[portfolioIndex];
-        });
-        portfolioNext.addEventListener('click', () => {
-            portfolioIndex = (portfolioIndex + 1) % portfolioImages.length;
-            portfolioModalImg.src = portfolioImages[portfolioIndex];
-        });
-        </script>
-
-
-            <!-- Independent Sports Club Website -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+     <!-- Independent Sports Club Website -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
         <!-- Thumbnail -->
         <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
-            <video id="iscCardVideo" class="w-full h-full object-cover rounded-md" muted>
+          <video id="iscCardVideo" class="w-full h-full object-cover rounded-md" muted>
             <source src="img/isc.mp4" type="video/mp4">
             Your browser does not support the video tag.
-            </video>
+          </video>
         </div>
 
         <h3 class="text-xl font-semibold text-blue-600">Independent Sports Club Website</h3>
-        <p class="text-gray-600 mt-2">Designed and hosted a responsive website with customized layout and branding. Hosted using cPanel for one year, providing full web functionality.</p>
-        <p class="text-gray-500 mt-1"><strong>Tech:</strong> HTML, CSS, JavaScript, Web Hosting</p>
+        <p class="text-gray-600 mt-2">Responsive website with full web functionality.</p>
         <a href="https://github.com/Sahanya42/ISC" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
-        </div>
+      </div>
 
-        <!-- Half-screen Video Modal -->
-        <div id="iscModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+      <!-- ISC Video Modal -->
+      <div id="iscModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
         <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex items-center justify-center">
-            <button id="iscClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-            <video id="iscModalVideo" class="max-h-full max-w-full rounded-md" controls autoplay>
+          <button id="iscClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
+          <video id="iscModalVideo" class="max-h-full max-w-full rounded-md" controls>
             <source src="img/isc.mp4" type="video/mp4">
             Your browser does not support the video tag.
-            </video>
+          </video>
         </div>
+      </div>
+
+      <script>
+      const iscCardVideo = document.getElementById('iscCardVideo');
+      const iscModal = document.getElementById('iscModal');
+      const iscClose = document.getElementById('iscClose');
+      const iscModalVideo = document.getElementById('iscModalVideo');
+
+      // Open modal
+      iscCardVideo.addEventListener('click', () => {
+        iscModal.classList.remove('hidden');
+        iscModalVideo.play().catch(err => console.log("Autoplay blocked:", err));
+      });
+
+      // Close modal
+      iscClose.addEventListener('click', () => {
+        iscModal.classList.add('hidden');
+        iscModalVideo.pause();
+        iscModalVideo.currentTime = 0;
+      });
+
+      // Close by clicking outside
+      iscModal.addEventListener('click', (e) => {
+        if(e.target === iscModal){
+          iscModal.classList.add('hidden');
+          iscModalVideo.pause();
+          iscModalVideo.currentTime = 0;
+        }
+      });
+      </script>
+
+
+      <!-- Book Inventory & Sales System -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/bookshop.png","img/bookshop1.png","img/bookshop2.png","img/bookshop3.png"]'>
+          <img src="img/bookshop.png" class="w-full h-full object-cover rounded-md">
         </div>
-
-        <script>
-        const iscCardVideo = document.getElementById('iscCardVideo');
-        const iscModal = document.getElementById('iscModal');
-        const iscClose = document.getElementById('iscClose');
-        const iscModalVideo = document.getElementById('iscModalVideo');
-
-        // Open modal on thumbnail click
-        iscCardVideo.addEventListener('click', () => {
-            iscModal.classList.remove('hidden');
-            iscModalVideo.play();
-        });
-
-        // Close modal
-        iscClose.addEventListener('click', () => {
-            iscModal.classList.add('hidden');
-            iscModalVideo.pause();
-            iscModalVideo.currentTime = 0;
-        });
-
-        // Close modal by clicking outside
-        iscModal.addEventListener('click', (e) => {
-            if (e.target === iscModal) {
-            iscModal.classList.add('hidden');
-            iscModalVideo.pause();
-            iscModalVideo.currentTime = 0;
-            }
-        });
-        </script>
-
-
-      <!-- Book Inventory System -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
-        <!-- Image (click to open modal) -->
-        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
-            <img src="img/bookshop.png" id="bookshopCardImg" class="w-full h-full object-cover rounded-md">
-        </div>
-
         <h3 class="text-xl font-semibold text-blue-600">Book Inventory & Sales System</h3>
-        <p class="text-gray-600 mt-2">Java desktop app with inventory, sales transactions, secure login, and reporting (Java Swing + MySQL + JasperReports).</p>
+        <p class="text-gray-600 mt-2">Java desktop app with inventory, sales, secure login, and reporting (Java Swing + MySQL + JasperReports).</p>
         <a href="https://github.com/Sahanya42/Book-Shop-Management-System" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Automated Response App (IoT) -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/iot.png","img/iot1.png","img/iot2.png","img/iot3.png","img/iot4.png"]'>
+          <img src="img/iot.png" class="w-full h-full object-cover rounded-md">
         </div>
-
-        <!-- Half-screen Modal -->
-        <div id="bookshopModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex flex-col items-center">
-            <button id="bookshopClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-            <div class="flex items-center justify-between w-full h-full">
-            <button id="bookshopPrev" class="text-gray-700 text-3xl font-bold">&larr;</button>
-            <img src="img/bookshop.png" id="bookshopModalImg" class="max-h-full max-w-full rounded-md object-contain">
-            <button id="bookshopNext" class="text-gray-700 text-3xl font-bold">&rarr;</button>
-            </div>
-        </div>
-        </div>
-
-        <script>
-        const bookshopImages = ["img/bookshop.png", "img/bookshop1.png", "img/bookshop2.png", "img/bookshop3.png"];
-        let bookshopIndex = 0;
-
-        const bookshopCardImg = document.getElementById('bookshopCardImg');
-        const bookshopModal = document.getElementById('bookshopModal');
-        const bookshopModalImg = document.getElementById('bookshopModalImg');
-        const bookshopClose = document.getElementById('bookshopClose');
-        const bookshopPrev = document.getElementById('bookshopPrev');
-        const bookshopNext = document.getElementById('bookshopNext');
-
-        // Open modal when clicking card image
-        bookshopCardImg.addEventListener('click', () => {
-            bookshopModalImg.src = bookshopImages[bookshopIndex];
-            bookshopModal.classList.remove('hidden');
-        });
-
-        // Close modal
-        bookshopClose.addEventListener('click', () => bookshopModal.classList.add('hidden'));
-        bookshopModal.addEventListener('click', (e) => { if(e.target === bookshopModal) bookshopModal.classList.add('hidden'); });
-
-        // Navigate modal images
-        bookshopPrev.addEventListener('click', () => {
-            bookshopIndex = (bookshopIndex - 1 + bookshopImages.length) % bookshopImages.length;
-            bookshopModalImg.src = bookshopImages[bookshopIndex];
-        });
-        bookshopNext.addEventListener('click', () => {
-            bookshopIndex = (bookshopIndex + 1) % bookshopImages.length;
-            bookshopModalImg.src = bookshopImages[bookshopIndex];
-        });
-        </script>
-
-
-      <!-- IoT Automated Response App -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
-        <!-- Thumbnail -->
-        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
-            <img src="img/iot.png" id="iotCardImg" class="w-full h-full object-cover rounded-md">
-        </div>
-
         <h3 class="text-xl font-semibold text-blue-600">Automated Response App</h3>
         <p class="text-gray-600 mt-2">Android app integrated with IoT devices and Firebase for real-time sensor data and motor control.</p>
         <a href="https://github.com/Sahanya42/AutomatedResponseApp" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Tuition Application -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/app.png","img/app1.png","img/app2.png","img/app3.png","img/app4.png"]'>
+          <img src="img/app.png" class="w-full h-full object-cover rounded-md">
+        </div>
+        <h3 class="text-xl font-semibold text-blue-600">Tuition Application</h3>
+        <p class="text-gray-600 mt-2">Android app with dashboards for teachers, students, and admin, featuring QR-based attendance and scheduling.</p>
+        <a href="#" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Diabetes Prediction ML Model -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer project-thumbnail" 
+             data-type="image" 
+             data-src='["img/ml.png","img/ml1.png"]'>
+          <img src="img/ml.png" class="w-full h-full object-cover rounded-md">
+        </div>
+        <h3 class="text-xl font-semibold text-blue-600">Diabetes Prediction ML Model</h3>
+        <p class="text-gray-600 mt-2">ML model trained on the Indian Pima Diabetes dataset to predict diabetes risk (Python, Pandas, Scikit-learn, Matplotlib).</p>
+        <a href="https://github.com/Sahanya42/Diabetes-Prediction-ML-Model" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Robotic Key Locator -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
+        <!-- Thumbnail -->
+        <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
+          <video id="robotCardVideo" class="w-full h-full object-cover rounded-md" muted>
+            <source src="img/robotics.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
 
-        <!-- Half-screen Modal -->
-        <div id="iotModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <h3 class="text-xl font-semibold text-blue-600">Robotic Key Locator</h3>
+        <p class="text-gray-600 mt-2">Arduino-controlled robot with ultrasonic sensor and motor, locates keys and sends notifications (C, Arduino, IoT).</p>
+        <a href="https://github.com/Sahanya42/Robotic-Key-Locator" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+      </div>
+
+      <!-- Robot Video Modal -->
+      <div id="robotModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
         <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex items-center justify-center">
-            <button id="iotClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-
-            <button id="iotPrev" class="absolute left-2 text-gray-700 text-3xl font-bold">&larr;</button>
-            <img id="iotModalImg" class="max-h-full max-w-full rounded-md" src="img/iot.png" alt="IoT Screenshot">
-            <button id="iotNext" class="absolute right-2 text-gray-700 text-3xl font-bold">&rarr;</button>
+          <button id="robotClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
+          <video id="robotModalVideo" class="max-h-full max-w-full rounded-md" controls>
+            <source src="img/robotics.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
-        </div>
+      </div>
 
-        <script>
-        const iotCardImg = document.getElementById('iotCardImg');
-        const iotModal = document.getElementById('iotModal');
-        const iotClose = document.getElementById('iotClose');
-        const iotModalImg = document.getElementById('iotModalImg');
-        const iotPrev = document.getElementById('iotPrev');
-        const iotNext = document.getElementById('iotNext');
+      <script>
+      const robotCardVideo = document.getElementById('robotCardVideo');
+      const robotModal = document.getElementById('robotModal');
+      const robotClose = document.getElementById('robotClose');
+      const robotModalVideo = document.getElementById('robotModalVideo');
 
-        const iotImages = ['img/iot.png', 'img/iot1.png', 'img/iot2.png', 'img/iot3.png', 'img/iot4.png'];
-        let iotIndex = 0;
+      // Open modal
+      robotCardVideo.addEventListener('click', () => {
+        robotModal.classList.remove('hidden');
+        robotModalVideo.play().catch(err => console.log("Autoplay blocked:", err));
+      });
 
-        // Open modal
-        iotCardImg.addEventListener('click', () => {
-            iotModal.classList.remove('hidden');
-            iotModalImg.src = iotImages[iotIndex];
-        });
+      // Close modal
+      robotClose.addEventListener('click', () => {
+        robotModal.classList.add('hidden');
+        robotModalVideo.pause();
+        robotModalVideo.currentTime = 0;
+      });
 
-        // Close modal
-        iotClose.addEventListener('click', () => iotModal.classList.add('hidden'));
-        iotModal.addEventListener('click', e => { if(e.target === iotModal) iotModal.classList.add('hidden'); });
-
-        // Previous image
-        iotPrev.addEventListener('click', () => {
-            iotIndex = (iotIndex - 1 + iotImages.length) % iotImages.length;
-            iotModalImg.src = iotImages[iotIndex];
-        });
-
-        // Next image
-        iotNext.addEventListener('click', () => {
-            iotIndex = (iotIndex + 1) % iotImages.length;
-            iotModalImg.src = iotImages[iotIndex];
-        });
-        </script>
+      // Close by clicking outside
+      robotModal.addEventListener('click', (e) => {
+        if(e.target === robotModal){
+          robotModal.classList.add('hidden');
+          robotModalVideo.pause();
+          robotModalVideo.currentTime = 0;
+        }
+      });
+      </script>
 
 
-      <!-- Tuition App -->
-            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
-            <!-- Thumbnail -->
-            <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
-                <img src="img/app.png" id="tuitionCardImg" class="w-full h-full object-cover rounded-md">
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600">Tuition Application</h3>
-            <p class="text-gray-600 mt-2">Android app with dashboards for teachers, students, and admin, featuring QR-based attendance and scheduling.</p>
-            <a href="#" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
-            </div>
-
-            <!-- Half-screen Modal -->
-            <div id="tuitionModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-            <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex items-center justify-center">
-                <button id="tuitionClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-
-                <button id="tuitionPrev" class="absolute left-2 text-gray-700 text-3xl font-bold">&larr;</button>
-                <img id="tuitionModalImg" class="max-h-full max-w-full rounded-md" src="img/app.png" alt="Tuition Screenshot">
-                <button id="tuitionNext" class="absolute right-2 text-gray-700 text-3xl font-bold">&rarr;</button>
-            </div>
-            </div>
-
-            <script>
-            const tuitionCardImg = document.getElementById('tuitionCardImg');
-            const tuitionModal = document.getElementById('tuitionModal');
-            const tuitionClose = document.getElementById('tuitionClose');
-            const tuitionModalImg = document.getElementById('tuitionModalImg');
-            const tuitionPrev = document.getElementById('tuitionPrev');
-            const tuitionNext = document.getElementById('tuitionNext');
-
-            const tuitionImages = ['img/app.png', 'img/app1.png', 'img/app2.png', 'img/app3.png', 'img/app4.png'];
-            let tuitionIndex = 0;
-
-            // Open modal
-            tuitionCardImg.addEventListener('click', () => {
-                tuitionModal.classList.remove('hidden');
-                tuitionModalImg.src = tuitionImages[tuitionIndex];
-            });
-
-            // Close modal
-            tuitionClose.addEventListener('click', () => tuitionModal.classList.add('hidden'));
-            tuitionModal.addEventListener('click', e => { if(e.target === tuitionModal) tuitionModal.classList.add('hidden'); });
-
-            // Previous image
-            tuitionPrev.addEventListener('click', () => {
-                tuitionIndex = (tuitionIndex - 1 + tuitionImages.length) % tuitionImages.length;
-                tuitionModalImg.src = tuitionImages[tuitionIndex];
-            });
-
-            // Next image
-            tuitionNext.addEventListener('click', () => {
-                tuitionIndex = (tuitionIndex + 1) % tuitionImages.length;
-                tuitionModalImg.src = tuitionImages[tuitionIndex];
-            });
-            </script>
-
-
-         <!-- Diabetes Prediction ML Model -->
-            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
-            <!-- Image (click to open modal) -->
-            <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
-                <img src="img/ml.png" id="mlCardImg" class="w-full h-full object-cover rounded-md">
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600">Diabetes Prediction ML Model</h3>
-            <p class="text-gray-600 mt-2">Machine Learning model trained on the Indian Pima Diabetes dataset to predict diabetes risk using Python, Pandas, Scikit-learn, and Matplotlib for analysis and visualization.</p>
-            <a href="https://github.com/Sahanya42/Diabetes-Prediction-ML-Model" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
-            </div>
-
-            <!-- Half-screen Modal -->
-            <div id="mlModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-            <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex flex-col items-center">
-                <button id="mlClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-                <div class="flex items-center justify-between w-full h-full">
-                <button id="mlPrev" class="text-gray-700 text-3xl font-bold">&larr;</button>
-                <img src="img/ml.png" id="mlModalImg" class="max-h-full max-w-full rounded-md object-contain">
-                <button id="mlNext" class="text-gray-700 text-3xl font-bold">&rarr;</button>
-                </div>
-            </div>
-            </div>
-
-            <script>
-            const mlImages = ["img/ml.png", "img/ml1.png"];
-            let mlIndex = 0;
-
-            const mlCardImg = document.getElementById('mlCardImg');
-            const mlModal = document.getElementById('mlModal');
-            const mlModalImg = document.getElementById('mlModalImg');
-            const mlClose = document.getElementById('mlClose');
-            const mlPrev = document.getElementById('mlPrev');
-            const mlNext = document.getElementById('mlNext');
-
-            // Open modal when clicking card image
-            mlCardImg.addEventListener('click', () => {
-                mlModalImg.src = mlImages[mlIndex];
-                mlModal.classList.remove('hidden');
-            });
-
-            // Close modal
-            mlClose.addEventListener('click', () => mlModal.classList.add('hidden'));
-            mlModal.addEventListener('click', (e) => { if(e.target === mlModal) mlModal.classList.add('hidden'); });
-
-            // Navigate modal images
-            mlPrev.addEventListener('click', () => {
-                mlIndex = (mlIndex - 1 + mlImages.length) % mlImages.length;
-                mlModalImg.src = mlImages[mlIndex];
-            });
-            mlNext.addEventListener('click', () => {
-                mlIndex = (mlIndex + 1) % mlImages.length;
-                mlModalImg.src = mlImages[mlIndex];
-            });
-            </script>
-
-
-        <!-- Robotic Key Locator / ISC Project -->
-            <!-- Robotic Key Locator -->
-            <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
-            <!-- Thumbnail -->
-            <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
-                <video id="robotCardVideo" class="w-full h-full object-cover rounded-md" muted>
-                <source src="img/robotics.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600">Robotic Key Locator</h3>
-            <p class="text-gray-600 mt-2">Autonomous robotic system designed to locate and retrieve keys using sensors, microcontrollers, and motor controls. Built with Arduino and sensor integration for real-time tracking.</p>
-            <a href="#" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
-            </div>
-
-            <!-- Half-screen Video Modal -->
-            <div id="robotModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-            <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex items-center justify-center">
-                <button id="robotClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-                <video id="robotModalVideo" class="max-h-full max-w-full rounded-md" controls autoplay>
-                <source src="img/robotics.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
-            </div>
-            </div>
-
-            <script>
-            const robotCardVideo = document.getElementById('robotCardVideo');
-            const robotModal = document.getElementById('robotModal');
-            const robotClose = document.getElementById('robotClose');
-            const robotModalVideo = document.getElementById('robotModalVideo');
-
-            // Open modal when clicking the video thumbnail
-            robotCardVideo.addEventListener('click', () => {
-                robotModal.classList.remove('hidden');
-                robotModalVideo.play();
-            });
-
-            // Close modal
-            robotClose.addEventListener('click', () => {
-                robotModal.classList.add('hidden');
-                robotModalVideo.pause();
-                robotModalVideo.currentTime = 0;
-            });
-
-            // Close modal when clicking outside the video
-            robotModal.addEventListener('click', (e) => {
-                if (e.target === robotModal) {
-                robotModal.classList.add('hidden');
-                robotModalVideo.pause();
-                robotModalVideo.currentTime = 0;
-                }
-            });
-            </script>
-
-
-
-        <!-- Life Motivator Project -->
+      <!-- Life Motivator Project -->
         <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
         <!-- Image (click to open modal) -->
         <div class="mb-4 rounded-md overflow-hidden h-40 md:h-48 cursor-pointer">
@@ -775,52 +447,8 @@
 
         <h3 class="text-xl font-semibold text-blue-600">Life Motivator</h3>
         <p class="text-gray-600 mt-2">A web application designed to provide motivational quotes, tips, and daily encouragement to users. Built as a test project to explore interactive UI and dynamic content updates.</p>
-        <a href="#" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
+        <a href="https://github.com/Sahanya42/Motivator-Webpage" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
         </div>
-
-        <!-- Half-screen Modal -->
-        <div id="motivatorModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex flex-col items-center">
-            <button id="motivatorClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-            <div class="flex items-center justify-between w-full h-full">
-            <button id="motivatorPrev" class="text-gray-700 text-3xl font-bold">&larr;</button>
-            <img src="img/motivator.png" id="motivatorModalImg" class="max-h-full max-w-full rounded-md object-contain">
-            <button id="motivatorNext" class="text-gray-700 text-3xl font-bold">&rarr;</button>
-            </div>
-        </div>
-        </div>
-
-        <script>
-        const motivatorImages = ["img/motivator.png", "img/motivator1.png", "img/motivato2r.png", "img/motivator2.png"];
-        let motivatorIndex = 0;
-
-        const motivatorCardImg = document.getElementById('motivatorCardImg');
-        const motivatorModal = document.getElementById('motivatorModal');
-        const motivatorModalImg = document.getElementById('motivatorModalImg');
-        const motivatorClose = document.getElementById('motivatorClose');
-        const motivatorPrev = document.getElementById('motivatorPrev');
-        const motivatorNext = document.getElementById('motivatorNext');
-
-        // Open modal when clicking card image
-        motivatorCardImg.addEventListener('click', () => {
-            motivatorModalImg.src = motivatorImages[motivatorIndex];
-            motivatorModal.classList.remove('hidden');
-        });
-
-        // Close modal
-        motivatorClose.addEventListener('click', () => motivatorModal.classList.add('hidden'));
-        motivatorModal.addEventListener('click', (e) => { if(e.target === motivatorModal) motivatorModal.classList.add('hidden'); });
-
-        // Navigate modal images
-        motivatorPrev.addEventListener('click', () => {
-            motivatorIndex = (motivatorIndex - 1 + motivatorImages.length) % motivatorImages.length;
-            motivatorModalImg.src = motivatorImages[motivatorIndex];
-        });
-        motivatorNext.addEventListener('click', () => {
-            motivatorIndex = (motivatorIndex + 1) % motivatorImages.length;
-            motivatorModalImg.src = motivatorImages[motivatorIndex];
-        });
-        </script>
 
         <!-- TypeTracker Project -->
         <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 p-6">
@@ -834,55 +462,84 @@
         <a href="https://github.com/Sahanya42/Type-Sharp-tool" target="_blank" class="text-blue-600 mt-4 inline-block hover:underline">View Code →</a>
         </div>
 
-        <!-- Half-screen Modal -->
-        <div id="typeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg relative w-3/4 md:w-1/2 h-1/2 p-4 flex flex-col items-center">
-            <button id="typeClose" class="absolute top-2 right-2 text-gray-700 text-2xl font-bold">&times;</button>
-            <div class="flex items-center justify-between w-full h-full">
-            <button id="typePrev" class="text-gray-700 text-3xl font-bold">&larr;</button>
-            <img src="img/type.png" id="typeModalImg" class="max-h-full max-w-full rounded-md object-contain">
-            <button id="typeNext" class="text-gray-700 text-3xl font-bold">&rarr;</button>
-            </div>
-        </div>
-        </div>
-
-        <script>
-        const typeImages = ["img/type.png", "img/type1.png"];
-        let typeIndex = 0;
-
-        const typeCardImg = document.getElementById('typeCardImg');
-        const typeModal = document.getElementById('typeModal');
-        const typeModalImg = document.getElementById('typeModalImg');
-        const typeClose = document.getElementById('typeClose');
-        const typePrev = document.getElementById('typePrev');
-        const typeNext = document.getElementById('typeNext');
-
-        // Open modal when clicking card image
-        typeCardImg.addEventListener('click', () => {
-            typeModalImg.src = typeImages[typeIndex];
-            typeModal.classList.remove('hidden');
-        });
-
-        // Close modal
-        typeClose.addEventListener('click', () => typeModal.classList.add('hidden'));
-        typeModal.addEventListener('click', (e) => { if(e.target === typeModal) typeModal.classList.add('hidden'); });
-
-        // Navigate modal images
-        typePrev.addEventListener('click', () => {
-            typeIndex = (typeIndex - 1 + typeImages.length) % typeImages.length;
-            typeModalImg.src = typeImages[typeIndex];
-        });
-        typeNext.addEventListener('click', () => {
-            typeIndex = (typeIndex + 1) % typeImages.length;
-            typeModalImg.src = typeImages[typeIndex];
-        });
-        </script>
-
-
-    </div>  
     </div>
   </div>
 </section>
+
+<!-- Reusable Modal -->
+<div id="projectModal" class="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 hidden">
+  <div class="bg-white w-11/12 md:w-2/3 lg:w-1/2 rounded-xl overflow-hidden shadow-lg flex flex-col relative">
+    <button id="modalClose" class="absolute top-2 right-2 text-gray-200 text-3xl font-bold hover:text-white">×</button>
+    <button id="modalPrev" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-200 text-3xl font-bold hover:text-white">←</button>
+    <div class="flex justify-center items-center w-full h-96 md:h-[500px] overflow-hidden">
+      <img id="modalImg" src="" alt="Project Image" class="max-h-full max-w-full object-contain hidden">
+      <video id="modalVideo" src="" class="max-h-full max-w-full object-contain hidden" controls autoplay></video>
+    </div>
+    <button id="modalNext" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-200 text-3xl font-bold hover:text-white">→</button>
+  </div>
+</div>
+
+<script>
+  const thumbnails = document.querySelectorAll(".project-thumbnail");
+  const modal = document.getElementById("projectModal");
+  const modalImg = document.getElementById("modalImg");
+  const modalVideo = document.getElementById("modalVideo");
+  const modalClose = document.getElementById("modalClose");
+  const modalPrev = document.getElementById("modalPrev");
+  const modalNext = document.getElementById("modalNext");
+
+  let currentIndex = 0;
+  let currentType = "image";
+  let currentItems = [];
+
+  function showModal(type, items, index=0) {
+    currentType = type;
+    currentItems = items;
+    currentIndex = index;
+    if(type === "image") {
+      modalImg.src = items[index];
+      modalImg.classList.remove("hidden");
+      modalVideo.classList.add("hidden");
+      modalVideo.pause();
+    } else if(type === "video") {
+      modalVideo.src = items[index];
+      modalVideo.classList.remove("hidden");
+      modalImg.classList.add("hidden");
+      modalVideo.play();
+    }
+    modal.classList.remove("hidden");
+  }
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener("click", () => {
+      const type = thumbnail.dataset.type;
+      let items = JSON.parse(thumbnail.dataset.src || `"${thumbnail.dataset.src}"`);
+      if(typeof items === "string") items = [items]; // single video
+      showModal(type, items);
+    });
+  });
+
+  modalClose.addEventListener("click", () => modal.classList.add("hidden"));
+  modal.addEventListener("click", e => { if(e.target === modal) modal.classList.add("hidden"); });
+
+  modalPrev.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + currentItems.length) % currentItems.length;
+    showModal(currentType, currentItems, currentIndex);
+  });
+
+  modalNext.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % currentItems.length;
+    showModal(currentType, currentItems, currentIndex);
+  });
+
+  document.addEventListener("keydown", e => {
+    if(modal.classList.contains("hidden")) return;
+    if(e.key === "ArrowLeft") modalPrev.click();
+    if(e.key === "ArrowRight") modalNext.click();
+    if(e.key === "Escape") modalClose.click();
+  });
+</script>
+
 
 
 <!-- Contact Section -->
